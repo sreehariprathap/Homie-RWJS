@@ -1,13 +1,9 @@
-# Redwood Tutorial App
+# Redwood Tutorial App --> Homie Personal Management App
 
-This repo represents the final state of the app created during the [Redwood Tutorial](https://redwoodjs.com/tutorial).
-It is meant to be a starting point for those working on the second half of the Tutorial, starting at the [Intermission](https://redwoodjs.com/docs/tutorial/intermission).
+this repo uses redwood js tutorial as starter template. 
 
-This repo contains much more styling than the one we built together in the tutorial, but is functionally identical.
-
-## Setup
-
-The [tutorial itself](https://redwoodjs.com/docs/tutorial/chapter1/prerequisites) contains instructions for getting this repo up and running, but here is a summary of the commands:
+Homie 
+A personal home for users to write blogs and manage other activites. created as part of learning redwood js a full stack web framework which uses prisma + graphQL + react + Tailwind css
 
 ```bash
 git clone https://github.com/redwoodjs/redwood-tutorial
