@@ -52,29 +52,22 @@ const ContactPage = () => {
           listClassName="list-disc ml-4"
           listItemClassName=""
         />
-        <Label
-          name="name"
-          className="block text-gray-700 uppercase text-sm"
-          errorClassName="block uppercase text-sm text-red-700"
-        >
-          Name
-        </Label>
+        <div className="flex justify-center">
+          <h2 className="text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-400 to-blue-600">
+            Create Post
+          </h2>
+        </div>
         <TextField
+          placeholder="Please Enter Title"
           name="name"
           validation={{ required: true }}
-          className="border rounded-sm px-2 py-1 outline-none"
-          errorClassName="border rounded-sm px-2 py-1 border-red-700 outline-none"
+          className="border rounded-md px-2 py-1 outline-none shadow-sm w-full mt-5"
+          errorClassName="border rounded-sm px-2 py-1 border-red-700 outline-none shadow-sm w-full mt-5"
         />
         <FieldError name="name" className="block text-red-700" />
 
-        <Label
-          name="email"
-          className="block mt-8 text-gray-700 uppercase text-sm"
-          errorClassName="block mt-8 text-red-700 uppercase text-sm"
-        >
-          Email
-        </Label>
         <TextField
+          placeholder="Please Enter Your Email"
           name="email"
           validation={{
             required: true,
@@ -83,32 +76,32 @@ const ContactPage = () => {
               message: 'Please enter a valid email address',
             },
           }}
-          className="border rounded-sm px-2 py-1"
-          errorClassName="border rounded-sm px-2 py-1 border-red-700 outline-none"
+          className="border rounded-md px-2 py-1 outline-none shadow-sm w-full mt-5"
+          errorClassName="border rounded-sm px-2 py-1 border-red-700 outline-none shadow-sm w-full mt-5"
         />
         <FieldError name="email" className="block text-red-700" />
 
-        <Label
-          name="message"
-          className="block mt-8 text-gray-700 uppercase text-sm"
-          errorClassName="block mt-8 text-red-700 uppercase text-sm"
-        >
-          Message
-        </Label>
         <TextAreaField
+          placeholder="Please Enter Your Message"
           name="message"
           validation={{ required: true }}
-          className="block border rounded-sm px-2 py-1"
-          errorClassName="block border rounded-sm px-2 py-1 border-red-700 outline-none"
+          className="border rounded-md px-2 py-1 outline-none shadow-sm w-full mt-5"
+          errorClassName="border rounded-sm px-2 py-1 border-red-700 outline-none shadow-sm w-full mt-5"
         />
         <FieldError name="message" className="block text-red-700" />
 
-        <Submit
-          className="block bg-blue-700 text-white mt-8 px-4 py-2 rounded"
-          disabled={loading}
-        >
-          Save
-        </Submit>
+        <div className="flex justify-center">
+          <Submit
+            className="block bg-blue-700 text-white mt-8 px-4 py-2 rounded"
+            disabled={loading}
+          >
+            Save
+          </Submit>
+          &nbsp;
+          <button className="block bg-purple-500 text-white mt-8 px-4 py-2 rounded">
+            Reset
+          </button>
+        </div>
       </Form>
     </>
   )
