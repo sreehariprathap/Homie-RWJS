@@ -1,6 +1,8 @@
 import { Link, routes } from '@redwoodjs/router'
 import { useAuth } from '@redwoodjs/auth'
 import { Toaster } from '@redwoodjs/web/toast'
+import Homie from '../../../public/assets/homie.png'
+import './BlogLayout.css'
 
 const BlogLayout = ({ children }) => {
   const { logIn, logOut, isAuthenticated, currentUser } = useAuth()
@@ -8,20 +10,20 @@ const BlogLayout = ({ children }) => {
   return (
     <>
       <Toaster />
-      <header className="relative flex justify-between items-center py-4 px-8 bg-blue-700 text-white">
+      <header className="relative flex justify-between items-center py-4 px-8 bg-white text-blue-700 mb-2 shadow-md ">
         <h1 className="text-5xl font-semibold tracking-tight">
-          <Link
-            className="text-blue-400 hover:text-blue-100 transition duration-100"
-            to={routes.home()}
-          >
-            Redwood Blog
+          <Link to={routes.home()}>
+            <img
+              src={Homie}
+              className="max-w-xs py-1.5 opacity-80 hover:opacity-100 transition duration-200 ease-in-out"
+            />
           </Link>
         </h1>
         <nav>
           <ul className="relative flex items-center font-light">
             <li>
               <Link
-                className="py-2 px-4 hover:bg-blue-600 transition duration-100 rounded"
+                className="py-2 px-4 hover:bg-blue-600 hover:text-white transition duration-100 rounded"
                 to={routes.about()}
               >
                 About
@@ -29,10 +31,10 @@ const BlogLayout = ({ children }) => {
             </li>
             <li>
               <Link
-                className="py-2 px-4 hover:bg-blue-600 transition duration-100 rounded"
+                className="py-2 px-4 hover:bg-blue-600 hover:text-white transition duration-100 rounded"
                 to={routes.contact()}
               >
-                Contact
+                Create Post
               </Link>
             </li>
             <li>
