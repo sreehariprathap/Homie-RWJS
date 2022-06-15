@@ -24,6 +24,14 @@ const BlogLayout = ({ children }) => {
             <li>
               <Link
                 className="py-2 px-4 hover:bg-blue-600 hover:text-white transition duration-100 rounded"
+                to={routes.smart()}
+              >
+                Smart Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="py-2 px-4 hover:bg-blue-600 hover:text-white transition duration-100 rounded"
                 to={routes.about()}
               >
                 About
